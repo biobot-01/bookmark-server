@@ -56,7 +56,7 @@ def CheckURI(uri, timeout=5):
         # Fetch URI
         response = requests.get(uri, timeout=timeout)
         # Check URI status code is 200
-        return response.status_code == requests.codes.ok
+        return response.status_code == 200
     except requests.RequestException:
         # If the GET request raised an exception, it's not OK
         return False
